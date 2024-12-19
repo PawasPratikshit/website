@@ -1,9 +1,11 @@
+/* General Reset */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
+/* Header Styles */
 header {
     background-color: #333;
     color: white;
@@ -11,53 +13,65 @@ header {
     text-align: center;
 }
 
+header .header-link {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Navigation Bar */
 nav {
     background-color: #444;
     padding: 10px;
     display: flex;
-    justify-content: flex-end; /* Move links to the right */
+    justify-content: flex-end;
 }
 
 nav a {
     color: white;
-    margin-left: 20px; /* Space between links */
+    margin-left: 20px;
     text-decoration: none;
 }
 
+/* Main Content */
 main {
     display: flex;
     justify-content: center;
     padding: 20px;
-    padding-bottom: 40px; /* Add some padding at the bottom */
+    padding-bottom: 40px;
 }
 
+/* Container for Image and Text */
 .about-container {
     display: flex;
-    align-items: center; /* Vertically align the content */
-    justify-content: flex-start; /* Align content to the left */
+    justify-content: flex-start; /* Aligns image to the left */
     width: 100%;
     max-width: 1200px;
     text-align: left;
-    flex-direction: row; /* Ensure image is on the left and text is on the right */
 }
 
+/* Image Styles */
 .about-img {
-    width: 40%;  /* Reduce image size */
+    width: 40%;  /* Set image width */
     height: auto; /* Maintain aspect ratio */
     object-fit: contain; /* Ensure image fits without stretching */
     margin-right: 20px; /* Space between image and text */
 }
 
+/* Text Styles */
 .about-text {
-    width: 50%;  /* Text takes remaining width */
+    width: 60%;  /* Adjust width of text section */
     font-size: 1.2rem;
     line-height: 1.6;
+    margin-left: auto;  /* Align text to the right */
 }
 
+/* Footer Styles */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 20px 10px;
-    margin-top: 40px; /* Add space above the footer */
+    margin-top: 40px;
 }
