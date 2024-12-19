@@ -64,7 +64,6 @@ main {
     width: 60%;  /* Adjust width of text section */
     font-size: 1.2rem;
     line-height: 1.6;
-    margin-left: auto;  /* Align text to the right */
 }
 
 /* Footer Styles */
