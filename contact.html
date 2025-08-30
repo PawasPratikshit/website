@@ -1,57 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact - Pawas Pratikshit</title>
-  <link rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Pawas Pratikshit</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Contact Form Styling */
+        .contact-container {
+            max-width: 800px;
+            width: 100%;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input, textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+            width: 100%;
+        }
+
+        button {
+            background: #333;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        button:hover {
+            background: blue;
+            transition: background 0.3s ease;
+        }
+
+        .other-ways {
+            margin-top: 30px;
+        }
+
+        .other-ways h3 {
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Contact</h1>
-  </header>
-  <nav>
-    <a href="index.html">About</a>
-    <a href="cv.html">CV</a>
-    <a href="contact.html">Contact</a>
-    <a href="publications.html">Publications</a>
-  </nav>
+    <header>
+        <a href="index.html" class="header-link">Pawas Pratikshit</a>
+    </header>
+    <nav>
+        <a href="index.html">About</a>
+        <a href="cv.html">CV</a>
+        <a href="contact.html">Contact</a>
+        <a href="publications.html">Publications</a>
+    </nav>
+    <main>
+        <div class="contact-container">
+            <h2>Contact Me</h2>
+            <p>If you'd like to get in touch, feel free to fill out the form below:</p>
 
- <main>
-  <h2>Contact Me</h2>
-  <p>If you'd like to get in touch, feel free to fill out the form below.</p>
+            <form action="https://formspree.io/f/mdkleqqp" method="POST">
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="message">Concern</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit">Send</button>
+            </form>
 
-  <div class="contact-container">
-    <form
-      action="https://formspree.io/f/mdkleqqp"
-      method="POST"
-      class="contact-form"
-    >
-      <label for="name">Name:</label><br />
-      <input type="text" id="name" name="name" required /><br /><br />
-
-      <label for="email">Email:</label><br />
-      <input type="email" id="email" name="email" required /><br /><br />
-
-      <label for="concern">Concern:</label><br />
-      <textarea id="concern" name="concern" rows="5" required></textarea><br /><br />
-
-      <button type="submit">Send</button>
-    </form>
-
-    <section class="contact-info">
-      <h2>Other Ways to Reach Me</h2>
-      <ul>
-        <li>Email: <a href="mailto:pawas2480@gmail.com">pawas2480@gmail.com</a></li>
-        <li>LinkedIn: <a href="https://www.linkedin.com/in/pawas-pratikshit-a5a10b145/">Pawas Pratikshit</a></li>
-        <li>Address: Ashoka University, Rajiv Gandhi Education City, Rai, Sonipat, Haryana-131029</li>
-      </ul>
-    </section>
-  </div>
-</main>
-
-  <footer>
-    <p>&copy; 2024 Pawas Pratikshit</p>
-  </footer>
+            <div class="other-ways">
+                <h3>Other Ways to Reach Me</h3>
+                <ul>
+                    <li>Email: <a href="mailto:pawas2480@gmail.com">pawas2480@gmail.com</a></li>
+                    <li>LinkedIn: <a href="https://www.linkedin.com/in/pawas-pratikshit-a5a10b145/">Pawas Pratikshit</a></li>
+                    <li>Address: Ashoka University, Rajiv Gandhi Education City, Rai, Sonipat, Haryana-131029</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Pawas Pratikshit</p>
+    </footer>
 </body>
 </html>
