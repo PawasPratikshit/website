@@ -5,6 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - Pawas Pratikshit</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        main {
+            display: block;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .cv-viewer {
+            width: 100%;
+            height: 800px; /* Adjust height depending on how much space you want */
+            border: 1px solid #ccc;
+            margin-top: 20px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -17,12 +37,16 @@
         <a href="publications.html">Publications</a>
     </nav>
     <main>
-        <h2><strong>Download CV</strong></h2>
-        <!-- Line under the "Download CV" title -->
-        <hr>
+        <h2><strong>Curriculum Vitae</strong></h2>
         <p>
-            Click here to download my latest <a href="CV_PawasPratikshit.pdf" target="_blank" style="color: blue; text-decoration: underline;">CV</a>.
+            You can view my CV below, or 
+            <a href="CV_PawasPratikshit.pdf" target="_blank" style="color: blue; text-decoration: underline;">click here to download it</a>.
         </p>
+
+        <!-- Embedded PDF -->
+        <embed src="CV_PawasPratikshit.pdf" type="application/pdf" class="cv-viewer">
+        <!-- Alternative for some browsers -->
+        <!-- <iframe src="CV_PawasPratikshit.pdf" class="cv-viewer"></iframe> -->
     </main>
     <footer>
         <p>&copy; 2024 Pawas Pratikshit</p>
