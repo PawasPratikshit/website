@@ -64,18 +64,24 @@ main {
     gap: 30px;
 }
 
+/* Add this wrapper */
+.about-img-wrapper {
+    flex: 1;                  /* allow image to take proportional space */
+    max-width: 320px;         /* optional, increase image size */
+}
+
 /* About Me Image */
 .about-img {
-    height: 100%;            /* match height of text box */
-    width: auto;             /* maintain aspect ratio */
+    width: 100%;             /* fill wrapper horizontally */
+    height: 100%;            /* match wrapper/text height */
     border-radius: 12px;
-    object-fit: cover;
+    object-fit: cover;       /* maintain aspect ratio, crop if needed */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* About Me Text */
 .about-text {
-    max-width: 580px;
+    flex: 1.5;               /* slightly wider than image */
     font-size: 1.1rem;
     line-height: 1.7;
     text-align: justify;
