@@ -81,35 +81,50 @@ footer {
     padding: 20px 10px;
     margin-top: 40px;
 }
-
+/* Ensure the container is wide enough and not forcing vertical stacking */
 .teaching-container {
   max-width: 1200px;
-  margin: 0 auto; /* center the container */
-  padding: 0 20px;
+  margin: 0 auto;
+  /* optionally add padding if needed */
 }
 
-/* Teaching photos in grid */
+/* Force .teaching-photos to use grid side by side */
 .teaching-photos {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* two equal columns */
+  display: grid !important; /* !important to override any flex or old display rules */
+  grid-template-columns: repeat(2, 1fr); /* two equal-width columns */
   gap: 20px;
-  margin: 20px 0;
+  margin: 20px auto;
+  width: 100%; /* ensures grid spans the parent container */
+  box-sizing: border-box;
 }
 
+/* Make sure figures don't default to block widths that break the grid */
 .teaching-photos figure {
-  text-align: center;
+  margin: 0;  /* reset margins if dates or browsers add them */
+  padding: 0;
+  width: 100%; /* so each figure fills its grid cell */
 }
 
+/* Images responsive inside their grid cell */
 .teaching-photos img {
   width: 100%;
   height: auto;
+  display: block;  /* remove inline-block or inline behavior */
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* Responsive: stack images on small screens */
+/* Captions under each image, centered */
+.teaching-photos figcaption {
+  text-align: center;
+  margin-top: 8px;
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* Responsive fallback: stack on small screens */
 @media (max-width: 768px) {
   .teaching-photos {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* one column, stack vertically */
   }
 }
