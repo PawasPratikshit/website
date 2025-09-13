@@ -58,23 +58,24 @@ main {
 .about-container {
     display: flex;
     justify-content: center;
-    align-items: center;   /* centers image & text vertically */
+    align-items: stretch;    /* stretch children to match height */
     max-width: 1000px;
     margin: 0 auto;
-    gap: 30px;             /* slightly smaller gap for balance */
+    gap: 30px;
 }
 
 /* About Me Image */
 .about-img {
-    max-width: 280px;      /* make image larger */
-    border-radius: 12px;   /* keep rectangular with rounded corners */
+    height: 100%;            /* match height of text box */
+    width: auto;             /* maintain aspect ratio */
+    border-radius: 12px;
     object-fit: cover;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* About Me Text */
 .about-text {
-    max-width: 580px;      /* slightly narrower */
+    max-width: 580px;
     font-size: 1.1rem;
     line-height: 1.7;
     text-align: justify;
