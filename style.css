@@ -83,16 +83,17 @@ footer {
     margin-top: 40px;
 }
 
+/* Teaching Images Section */
 .teaching-photos {
     display: flex;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap; /* stacks them on small screens */
     margin-top: 20px;
 }
 
 .teaching-photos figure {
-    max-width: 45%;
+    flex: 1;             /* let both figures share space equally */
+    max-width: 45%;      /* prevent them from getting too wide */
     text-align: center;
 }
 
@@ -108,7 +109,14 @@ footer {
     font-size: 0.9em;
     color: #555;
 }
-@media (max-width: 600px) {
+
+/* Responsive: stack images on small screens */
+@media (max-width: 768px) {
+    .teaching-photos {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .teaching-photos figure {
         max-width: 100%;
     }
