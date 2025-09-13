@@ -81,6 +81,26 @@ footer {
     padding: 20px 10px;
     margin-top: 40px;
 }
+.about-container {
+    display: flex;
+    justify-content: center;   /* centers the whole container horizontally */
+    align-items: flex-start;   /* keeps image + text aligned at the top */
+    max-width: 1000px;         /* keeps it from stretching too wide */
+    margin: 0 auto;            /* centers the container itself */
+    gap: 20px;                 /* space between image and text */
+}
+
+.about-img {
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-text {
+    max-width: 650px;          /* so lines don’t stretch edge to edge */
+    text-align: justify;       /* makes paragraphs look neat */
+}
+
 /* Ensure the container is wide enough and not forcing vertical stacking */
 .teaching-container {
   max-width: 1200px;
