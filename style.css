@@ -82,3 +82,29 @@ footer {
     padding: 20px 10px;
     margin-top: 40px;
 }
+
+.teaching-photos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* stacks them on small screens */
+    margin-top: 20px;
+}
+
+.teaching-photos figure {
+    max-width: 45%;
+    text-align: center;
+}
+
+.teaching-img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.teaching-photos figcaption {
+    margin-top: 8px;
+    font-size: 0.9em;
+    color: #555;
+}
