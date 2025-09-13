@@ -58,23 +58,24 @@ main {
 .about-container {
     display: flex;
     justify-content: center;
-    align-items: stretch; 
+    align-items: stretch;    /* stretch children to match height */
     max-width: 1000px;
     margin: 0 auto;
     gap: 30px;
 }
 
-/* Remove the wrapper max-width */
+/* Add this wrapper */
 .about-img-wrapper {
-    flex-shrink: 0; /* prevent the image from shrinking */
+    flex: 1;                  /* allow image to take proportional space */
+    max-width: 320px;         /* optional, increase image size */
 }
 
-/* Make image fill the height and scale width proportionally */
+/* About Me Image */
 .about-img {
-    height: 100%;      /* match text height */
-    width: auto;       /* scale width proportionally */
+    width: 100%;             /* fill wrapper horizontally */
+    height: 100%;            /* match wrapper/text height */
     border-radius: 12px;
-    object-fit: contain; /* prevent cropping */
+    object-fit: cover;       /* maintain aspect ratio, crop if needed */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
