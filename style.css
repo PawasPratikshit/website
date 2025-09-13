@@ -58,32 +58,26 @@ main {
 .about-container {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;   /* centers image & text vertically */
     max-width: 1000px;
     margin: 0 auto;
-    gap: 40px; /* more breathing space */
+    gap: 30px;             /* slightly smaller gap for balance */
 }
 
 /* About Me Image */
 .about-img {
-    max-width: 220px;
-    border-radius: 50%;
+    max-width: 280px;      /* make image larger */
+    border-radius: 12px;   /* keep rectangular with rounded corners */
     object-fit: cover;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* About Me Text */
 .about-text {
-    max-width: 650px;
+    max-width: 580px;      /* slightly narrower */
     font-size: 1.1rem;
     line-height: 1.7;
     text-align: justify;
-}
-
-.about-text h2 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    color: #111;
 }
 
 /* Footer Styles */
