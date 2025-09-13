@@ -95,19 +95,15 @@ footer {
 }
 
 .teaching-photos img {
-  width: 100%;  /* each fills its grid cell */
+  width: 100%;  /* fill its grid cell */
   height: auto;
   border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 /* Responsive: stack images on small screens */
 @media (max-width: 768px) {
-    .teaching-photos {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .teaching-photos figure {
-        max-width: 100%;
-    }
+  .teaching-photos {
+    grid-template-columns: 1fr; /* single column instead of flex */
+  }
 }
