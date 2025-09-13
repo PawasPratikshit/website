@@ -73,7 +73,7 @@ main {
 /* About Me Image */
 .about-img {
     width: 100%;             /* fill wrapper horizontally */
-    height: auto;            /* match wrapper/text height */
+    height: 100%;            /* match wrapper/text height */
     border-radius: 12px;
     object-fit: cover;       /* maintain aspect ratio, crop if needed */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
