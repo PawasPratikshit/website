@@ -44,10 +44,9 @@ nav a:hover {
 
 /* Main Content */
 main {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    padding-bottom: 40px;
+  display: block;   /* no flex here */
+  padding: 20px;
+  padding-bottom: 40px;
 }
 
 /* Container for Image and Text */
@@ -83,6 +82,13 @@ footer {
     margin-top: 40px;
 }
 
+.teaching-container {
+  max-width: 1200px;
+  margin: 0 auto; /* center the container */
+  padding: 0 20px;
+}
+
+/* Teaching photos in grid */
 .teaching-photos {
   display: grid;
   grid-template-columns: 1fr 1fr; /* two equal columns */
@@ -95,7 +101,7 @@ footer {
 }
 
 .teaching-photos img {
-  width: 100%;  /* fill its grid cell */
+  width: 100%;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -104,6 +110,6 @@ footer {
 /* Responsive: stack images on small screens */
 @media (max-width: 768px) {
   .teaching-photos {
-    grid-template-columns: 1fr; /* single column instead of flex */
+    grid-template-columns: 1fr;
   }
 }
